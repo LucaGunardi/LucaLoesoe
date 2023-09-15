@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+ <html>
+	
+ <head> 
+<title>Calculator_V1</title>
+<script></script>
+<style>
+
+.achtergrond {
+background-color: #FFFFFF;
+
+
+}
+.knop {
+     height: 90px;
+     width: 200px; 
+     border-radius: 1px; 
+     background-color: #F0EEE9;
+     font-size: 39px;
+     box-shadow: 2px;
+     margin-bottom: 5px;
+    
+}
+
+.knoppencontainer {
+     border-radius: 10%;
+}
+
+.operatorknop {
+     height: 90px;
+     width: 200px; 
+     border-radius: 1px; 
+     background-color: #EF8D1E;
+     font-size: 39px;
+     box-shadow: 2px;
+
+}
+
+.scherm {
+     height: 80px;
+     width: 804px; 
+     border-radius: 1px; 
+     box-shadow: 2px;
+     margin-bottom: 5px;
+     font-size: 39px;
+}
+
+</style>
+<script>
+let gelijkheidhaakjes = 0;
+
+function KarakterToevoegen(karakter) {
+  let scherm = document.getElementById("scherm");
+  scherm.value += karakter;
+
+  if (karakter === "(") {
+    gelijkheidhaakjes += 1;
+  } else if (karakter === ")") {
+    gelijkheidhaakjes -= 1;
+  }
+}
+
+function DeleteLaatsteKarakter() {
+  let scherm = document.getElementById("scherm");
+  scherm.value = scherm.value.slice(0, -1);
+}
+
+function Verwijderscherm() {
+  let scherm = document.getElementById("scherm");
+  scherm.value = "";
+  gelijkheidhaakjes = 0;
+}
+
+function Bereken() {
+let scherm = document.getElementById("scherm");
+if (scherm.value.length === 0) {
+    return;
+}
+let regex = /[0-9-+*()/]/g;
+if (scherm.value.replace(regex, "").length > 0 || gelijkheidhaakjes !== 0) {
+            scherm.value = "SYNTAX ERROR";
+        } else {
+            scherm.value = eval(scherm.value);
+        }
+gelijkheidhaakjes = 0;
+}
+
+
+</script>
+ </head> 
+ <body> 
+<div class ="achtergrond"><input id="scherm" class ="scherm"><div class="knoppencontainer"></div>
+
+
+	<button class="knop" onclick="KarakterToevoegen('&#40;')">(</button> 
+    <button class="knop" onclick="KarakterToevoegen('&#41;')">)</button> 
+    <button class="knop" onclick="DeleteLaatsteKarakter()">DEL</button> 
+    <button class="knop" onclick="Verwijderscherm()">C</button><br>
+	<button class="knop" onclick="KarakterToevoegen('0')">0</button> 
+    <button class="knop" onclick="KarakterToevoegen('1')">1</button> 
+    <button class="knop" onclick="KarakterToevoegen('2')">2</button> 
+    <button class="operatorknop" onclick="KarakterToevoegen('+')">+</button><br>
+	<button class="knop" onclick="KarakterToevoegen('3')">3</button> 
+    <button class="knop" onclick="KarakterToevoegen('4')">4</button> 
+    <button class="knop" onclick="KarakterToevoegen('5')">5</button> 
+    <button class="operatorknop" onclick="KarakterToevoegen('-')">-</button><br>
+	<button class="knop" onclick="KarakterToevoegen('6')">6</button> 
+    <button class="knop" onclick="KarakterToevoegen('7')">7</button> 
+    <button class="knop" onclick="KarakterToevoegen('8')">8</button> 
+    <button class="operatorknop" onclick="KarakterToevoegen('*')">*</button><br>
+	<button class="knop" onclick="KarakterToevoegen(',')">,</button> 
+    <button class="knop" onclick="KarakterToevoegen('9')">9</button> 
+    <button class="knop" onclick="Bereken()">=</button>
+    <button class="operatorknop" onclick="KarakterToevoegen('/')">/</button><br>
+
+</div>
+ </body> 
+ </html>
