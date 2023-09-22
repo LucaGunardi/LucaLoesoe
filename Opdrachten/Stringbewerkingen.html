@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mijn vierde opdracht</title>
+	<style>
+		body {
+			background-color: lightblue;
+			color: darkblue;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			color: darkred;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>Mijn vierde opdracht</h1>
+	<script>
+        
+	let naam = prompt("Vul hier uw volledige naam in");
+    let begroeting = "Hallo, " + naam + ".";
+    document.write(begroeting + "<br>");
+    let lengte = naam.length
+
+    document.write("De lengte van uw twee namen is " + lengte + " tekens." + "<br>"); 
+    const myArray = naam.split(" ");
+
+    document.write("Uw voornaam: " + myArray[0] + "<br>");
+    document.write("Uw achternaam: " + myArray[1]+ "<br>");
+        
+	</script>
+</body>
+</html>
