@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator_MVP</title>
+	<style>
+		body {
+			background-color: lightblue;
+			color: darkblue;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			color: darkred;
+			margin-top: 50px;
+		}
+	</style>
+
+    
+<script>
+    function optellen() {
+      let getal1tekst = prompt("Voer het eerste getal in.");
+      let getal1 = parseInt(getal1tekst);
+    
+      let getal2tekst = prompt("Voer het tweede getal in.");
+      let getal2 = parseInt(getal2tekst);
+        
+      if (isNaN(getal1) || isNaN(getal2)) {
+        document.write("ERROR de ingevoerde getallen zijn geen nummers");
+      } else {
+        let totaal = getal1 + getal2;
+        document.write("Het resultaat van " + getal1 + " plus " + getal2 + " is " + totaal);
+      }
+    }
+
+
+    function aftrekken() {
+      let getal1tekst = prompt("Voer het eerste getal in.");
+      let getal1 = parseInt(getal1tekst);
+    
+      let getal2tekst = prompt("Voer het tweede getal in.");
+      let getal2 = parseInt(getal2tekst);
+        
+      if (isNaN(getal1) || isNaN(getal2)) {
+        document.write("ERROR de ingevoerde getallen zijn geen nummers");
+      } else {
+        let totaal = getal1 - getal2;
+        document.write("Het resultaat van " + getal1 + " min " + getal2 + " is " + totaal);
+      }
+    }
+    </script>
+
+
+    </head>
+    <body>
+      <h1>Wil je twee getallen optellen of aftrekken?</h1>
+      <button onclick="optellen()">Optellen</button>
+  
+
+	<button onclick="aftrekken()">Aftrekken</button>
+	
+</body>
+</html>
