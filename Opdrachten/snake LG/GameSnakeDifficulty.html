@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <audio autoplay loop>
+    <source src="muziek/Fluffing-a-Duck(chosic.com).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="JS/P5/p5.min.js"></script>
+  <style>
+    
+    /* Eerste knop */
+    button#button1 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #1e88e5; /* Blauwe tekstkleur */
+      background-color: #FFFFFF;
+      padding: 20px 150px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 55%; /* Hoogste positie, 100px boven button2 */
+      left: 50%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+    }
+
+    /* Tweede knop */
+    button#button2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #4caf50; /* Groene tekstkleur */
+      background-color: #ffffff;
+      padding: 20px 105px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 65%; /* Perfect in het midden */
+      left: 50%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+    }
+
+    /* Derde knop */
+    button#button3 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #ff0000; /* Rode tekstkleur */
+      background-color: #ffffff;
+      padding: 20px 105px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 75%; /* Laagste positie, 100px onder button2 */
+      left: 50%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+    }
+
+    button#button4 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #000000; /* Rode tekstkleur */
+      background-color: #ffffff;
+      padding: 20px 100px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 85%; /* Laagste positie, 100px onder button2 */
+      left: 50%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+    }
+
+    button#button1:hover {
+      background-color: #1565c0; 
+      color: #ffffff; 
+    }
+
+    button#button2:hover {
+      background-color: #4caf50; 
+      color: #ffffff; 
+    }
+
+    button#button3:hover {
+      background-color: #ff0000; 
+      color: #ffffff; 
+    }
+
+    button#button4:hover {
+      background-color: #000000; 
+      color: #ffffff; 
+    }
+    
+    body {
+       background-image: url('pictures/SnakeGroenAchtergrond.jpg');  
+      
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      overflow: hidden;
+      height: 100vh; 
+    }
+
+    h1 {
+      font-family: 'Fira Code', monospace; 
+      font-size: 10em; 
+      color: #fff; 
+      text-align: center;
+      text-transform: uppercase; 
+    }
+
+    u {
+      color: #fff;
+    }
+    
+    p {
+      text-align: center;
+      font-size: 2em;
+      font-family: 'Fira Code', monospace;
+      margin-bottom: -105px;
+    }
+
+
+  </style>
+  <title>Snake Difficulty</title>
+</head>
+<body>
+  <u><h1>SNAKE Difficulty</h1></u>
+<p> ㅤ</p>
+  <p>Sander de Slang kruipt sneller bij een moeilijker level. 
+  </p>
+  <p>Begin makkelijk! Eindig moeilijk!</p>
+
+  <a href="GameSnakeLG.html">
+  <button id="button1" >EASY ⭐ </button>
+  </a>
+  
+  <a href="GameSnakeLGMEDIUM.html">
+  <button id="button2">MEDIUM ⭐⭐</button>
+</a>
+
+  <a href="GameSnakeLGHARD.html">
+  <button id="button3">HARD ⭐⭐⭐</button>
+</a>
+  
+  <a href="GameSnakeMenu.html">
+    <button id="button4">BACK TO MENU</button>
+    </a>
+  
+</body>
+</html>

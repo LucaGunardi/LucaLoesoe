@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <audio autoplay loop>
+    <source src="muziek/Fluffing-a-Duck(chosic.com).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="JS/P5/p5.min.js"></script>
+  <style>
+    
+    /* Eerste knop */
+    button#button1 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #060708; /* Blauwe tekstkleur */
+      background-color: #FFFFFF;
+      padding: 20px 150px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 90%; /* Hoogste positie, 100px boven button2 */
+      left: 50%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+    }
+
+   
+    
+
+    button#button1:hover {
+      background-color: #030405; /* Achtergrondkleur veranderen bij hover, pas aan indien nodig */
+      color: #ffffff; /* Tekstkleur veranderen bij hover, pas aan indien nodig */
+    }
+
+    
+    body {
+      background-image: url('pictures/SnakeGroenAchtergrond.jpg');  /* Vervang met het pad naar jouw afbeelding */
+      
+      background-size: cover; /* Hiermee wordt de afbeelding op de achtergrond bedekt */
+      background-position: center; /* Hiermee wordt de afbeelding in het midden geplaatst */
+      background-repeat: no-repeat; /* Hiermee wordt herhaling van de afbeelding voorkomen */
+      margin: 0;
+      overflow: hidden;
+      height: 100vh; /* Hiermee wordt de hoogte van de body ingesteld op 100% van de viewport hoogte */
+    }
+
+    h1 {
+      font-family: 'Fira Code', monospace; /* Gebruik Fira Code als lettertype */
+      font-size: 10em; /* Pas de grootte aan zoals gewenst */
+      color: #fff; /* Tekstkleur, vervang door je voorkeur */
+      text-align: center;
+      text-transform: uppercase; /* Zet tekst om naar hoofdletters */
+      /* outline: 5px solid #ffffff; */
+      
+    }
+
+    p {
+      text-align: center;
+      font-size: 2em;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+  </style>
+  <title>Snake Game Menu</title>
+</head>
+<body>
+  
+  <h1>SNAKE</h1>
+  <div class="image-container">
+    <img src="pictures/Arrow keys.png" alt="Arrow Keys">
+  </div>
+
+  
+  
+    <p>Gebruik de pijltjes om je richting te bepalen. </p>
+    <p>⬆️ Omhoog ⬇️ Omlaag ⬅️ Naar links ➡️ Naar rechts</p>
+ 
+  
+  <a href="GameSnakeMenu.html">
+  <button id="button1">BACK TO MENU</button>
+  </a>
+  
+  
+  
+</body>
+</html>

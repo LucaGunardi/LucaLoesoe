@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="JS/P5/p5.min.js"></script>
+  <script defer src="JS/sketch.js"></script>
+  <title>Snake Game</title>
+  
+</head>
+<body>
+  
+  <p id="p1">Het doel van het spel is simpel. Overleef zo lang als je kan, Let op! Om te blijven leven moet je niet de randen van het scherm of je eigen lichaam raken.  Heel veel plezier! </p>
+  <p id="p2">Je speelt nu op de moei- lijkheidsgraad easy. Dat is waarom je op de lang- zaamste snelheid beweegt. Begint het te makkelijk te worden? Dan kan je naar medium. Goed gedaan!</p>
+
+  <div class="rechthoek"> </div>
+  <a href="GameSnakeMenu.html">
+    <button id="button4">BACK TO MENU</button>
+
+   
+    </a>
+
+    <audio autoplay loop>
+      <source src="muziek/Fluffing-a-Duck(chosic.com).mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+  </audio>    
+</body>
+<style>
+  button#button4 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2em;
+  color: #000000; /* Rode tekstkleur */
+  background-color: #ffffff;
+  padding: 20px 100px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  position: absolute;
+  top: 70%; /* Laagste positie, 100px onder button2 */
+  left: 3.15%; /* Perfect in het midden */
+}
+
+    button#button5 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #000000; /* Rode tekstkleur */
+      background-color: #ffffff;
+      padding: 20px 100px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 14.5%; /* Laagste positie, 100px onder button2 */
+      left: 15%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+    }
+
+
+    body {
+      background-image: url('pictures/SnakeGroenAchtergrond.jpg');  /* Vervang met het pad naar jouw afbeelding */
+      
+      background-size: cover; /* Hiermee wordt de afbeelding op de achtergrond bedekt */
+      background-position: center; /* Hiermee wordt de afbeelding in het midden geplaatst */
+      background-repeat: no-repeat; /* Hiermee wordt herhaling van de afbeelding voorkomen */
+      margin: 0;
+      overflow: hidden;
+      height: 100vh; /* Hiermee wordt de hoogte van de body ingesteld op 100% van de viewport hoogte */
+    }
+    
+    p#p1 {
+            overflow-wrap: break-word;
+            width: 350px; /* Stel hier het gewenste aantal pixels in */
+            position: absolute;
+            top: 160px;
+            left: 112px;
+            font-size: 1.5em;
+            text-align: justify;
+            font-family: 'Fira Code', monospace;
+        
+        }
+
+    p#p2 {
+            overflow-wrap: break-word;
+            width: 350px; /* Stel hier het gewenste aantal pixels in */
+            position: absolute;
+            top: 380px;
+            left: 112px;
+            font-size: 1.5em;
+            text-align: justify;
+            font-family: 'Fira Code', monospace;
+        
+        }    
+
+        .rechthoek {
+  width: 400px;
+  height: 450px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  margin: 150px 70px 70px 70px; /* Aangepaste marges (top right bottom left) */
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+
+</style>
+</html>

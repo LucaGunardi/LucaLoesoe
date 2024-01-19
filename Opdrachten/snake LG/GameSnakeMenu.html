@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <audio autoplay loop>
+    <source src="muziek/Fluffing-a-Duck(chosic.com).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="JS/P5/p5.min.js"></script>
+  <style>
+    
+    /* Eerste knop */
+    button#button1 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #1e88e5; /* Blauwe tekstkleur */
+      background-color: #FFFFFF;
+      padding: 20px 150px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 50%; /* Hoogste positie, 100px boven button2 */
+      left: 50%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+    }
+
+    /* Tweede knop */
+    button#button2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #4caf50; /* Groene tekstkleur */
+      background-color: #ffffff;
+      padding: 20px 100px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 60%; /* Perfect in het midden */
+      left: 50%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+    }
+
+    /* Derde knop */
+    button#button3 {
+      font-family: 'Arial', sans-serif;
+      font-size: 2em;
+      color: #ff0000; /* Rode tekstkleur */
+      background-color: #ffffff;
+      padding: 20px 140px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      position: absolute;
+      top: 70%; /* Laagste positie, 100px onder button2 */
+      left: 50%; /* Perfect in het midden */
+      transform: translate(-50%, -50%);
+      
+    }
+
+    button#button1:hover {
+      background-color: #1565c0; /* Achtergrondkleur veranderen bij hover, pas aan indien nodig */
+      color: #ffffff; /* Tekstkleur veranderen bij hover, pas aan indien nodig */
+    }
+
+    button#button2:hover {
+      background-color: #4caf50; /* Achtergrondkleur veranderen bij hover, pas aan indien nodig */
+      color: #ffffff; /* Tekstkleur veranderen bij hover, pas aan indien nodig */
+    }
+
+    button#button3:hover {
+      background-color: #ff0000; /* Achtergrondkleur veranderen bij hover, pas aan indien nodig */
+      color: #ffffff; /* Tekstkleur veranderen bij hover, pas aan indien nodig */
+    }
+    
+    body {
+      background-image: url('pictures/SnakeGroenAchtergrond.jpg');  /* Vervang met het pad naar jouw afbeelding */
+      
+      background-size: cover; /* Hiermee wordt de afbeelding op de achtergrond bedekt */
+      background-position: center; /* Hiermee wordt de afbeelding in het midden geplaatst */
+      background-repeat: no-repeat; /* Hiermee wordt herhaling van de afbeelding voorkomen */
+      margin: 0;
+      overflow: hidden;
+      height: 100vh; /* Hiermee wordt de hoogte van de body ingesteld op 100% van de viewport hoogte */
+    }
+
+    h1 {
+      font-family: 'Fira Code', monospace; /* Gebruik Fira Code als lettertype */
+      font-size: 10em; /* Pas de grootte aan zoals gewenst */
+      color: #fff; /* Tekstkleur, vervang door je voorkeur */
+      text-align: center;
+      text-transform: uppercase; /* Zet tekst om naar hoofdletters */
+      /* outline: 5px solid #ffffff; */
+      
+    }
+
+    u {
+      color: #fff;
+    }
+
+  </style>
+  <title>Snake Game Menu</title>
+</head>
+<body>
+  <u><h1>SNAKE</h1></u>
+  <a href="GameSnakeDifficulty.html">
+  <button id="button1">PLAY</button>
+  </a>
+
+  <a href="controls.html">
+  <button id="button2">CONTROLS</button>
+  </a>
+
+  
+  
+</body>
+</html>
