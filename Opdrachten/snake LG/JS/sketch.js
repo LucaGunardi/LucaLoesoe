@@ -8,8 +8,7 @@ let dir;
 let length = 1;
 let score = 0;
 let highScore = 0;
-let gameOver = false;
-let replayClicked = false;
+let coins = localStorage.getItem('coins') ? parseInt(localStorage.getItem('coins')) : 0; // Initialiseer coins met de waarde uit localStorage
 
 function setup() {
   let canvas = createCanvas(800, 800);
@@ -33,8 +32,9 @@ function draw() {
   // Toon de score
   fill(0);
   textSize(20);
-  fill(255,255,255)
+  fill(255,255,255);
   text("Score: " + score, 532, 20);
+  text("Coins: " + coins, 400, 20);
   
   // Update high score indien nodig
   if (score > highScore) {
@@ -54,6 +54,7 @@ function draw() {
     text("GAME OVER", width / 2, height / 2);
     text("Score: " + score, width / 2, height / 2 + 60);
     text("Highscore: " + highScore, width / 2, height / 2 + 120);
+    text("Coins: " + coins, width / 2, height / 2 - 180);
     textSize(45);
     text("Kleine tip: probeer niet dood te gaan", width / 2, height / 2 - 120);
 
@@ -73,8 +74,10 @@ function update() {
     if (dist(head.x, head.y, food.x, food.y) == 0) {
       length += 1;
       generateFood();
-      // Verhoog de score wanneer voedsel wordt gegeten
+      // Verhoog de score en coins wanneer voedsel wordt gegeten
       score += 1;
+      coins += 1;
+      localStorage.setItem('coins', coins); // Bewaar coins in localStorage
     }
 
     if (
