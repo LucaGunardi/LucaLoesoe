@@ -142,9 +142,10 @@
     </div>
   </div>
   
+  <!-- Hier wordt de waarde van 'coins' weergegeven -->
   
-    
- 
+  <p>Aantal coins: <span id="coinsDisplay"></span></p>
+
   
   <a href="GameSnakeMenu.html">
   <button id="button1">BACK TO MENU</button>
@@ -160,6 +161,11 @@
       var overlay = document.getElementById("overlay");
       overlay.style.display = "none"; // Verberg de overlay
     }
+
+    // JavaScript-code om de waarde van 'coins' weer te geven
+    var coins ; // Voeg hier de huidige waarde van coins toe
+    document.getElementById('coinsDisplay').innerText = coins;
+    
   </script>
   
 </body>

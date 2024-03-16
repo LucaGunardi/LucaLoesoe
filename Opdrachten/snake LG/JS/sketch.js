@@ -7,8 +7,12 @@ let head;
 let dir;
 let length = 1;
 let score = 0;
-let highScore = 0;
-let coins = localStorage.getItem('coins') ? parseInt(localStorage.getItem('coins')) : 0; // Initialiseer coins met de waarde uit localStorage
+let highScore = localStorage.getItem('highScore') ? parseInt(localStorage.getItem('highScore')) : 0;
+// JavaScript-code om de waarde van 'coins' weer te geven
+ // JavaScript-code om de waarde van 'coins' weer te geven
+var coins = localStorage.getItem('coins') ? parseInt(localStorage.getItem('coins')) : 0; // Haal de waarde van 'coins' op uit de local storage
+document.getElementById('coinsDisplay').innerText = coins;
+
 
 function setup() {
   let canvas = createCanvas(800, 800);
@@ -32,13 +36,14 @@ function draw() {
   // Toon de score
   fill(0);
   textSize(20);
-  fill(255,255,255);
+  fill(255,255,255)
   text("Score: " + score, 532, 20);
   text("Coins: " + coins, 400, 20);
   
   // Update high score indien nodig
   if (score > highScore) {
     highScore = score;
+    localStorage.setItem('highScore', highScore); // Bewaar highScore in localStorage
   }
   
   // Toon de high score
